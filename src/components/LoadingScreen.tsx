@@ -27,11 +27,11 @@ const LoadingScreen: React.FC = () => {
             transition={{ duration: 1 }}
             className="max-w-md w-full relative"
           >
-            <motion.div
+            <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
               onClick={() => setIsOpen(true)}
-              className="relative p-8 md:p-12 text-center rounded-[2rem] glass-gold border border-luxury-gold/30 backdrop-blur-xl shadow-[0_0_50px_rgba(212,175,55,0.1)] cursor-pointer group"
+              className="relative p-8 md:p-12 text-center rounded-[2rem] glass-gold border border-luxury-gold/30 backdrop-blur-xl shadow-[0_0_50px_rgba(212,175,55,0.1)] cursor-pointer group w-full block appearance-none bg-transparent"
             >
               {/* Corner Ornaments */}
               <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-luxury-gold/20 rounded-tl-xl" />
@@ -54,11 +54,11 @@ const LoadingScreen: React.FC = () => {
               
               <div className="w-24 h-[1px] bg-luxury-gold/20 mx-auto mb-10" />
 
-              <div className="relative flex items-center justify-center gap-3 text-luxury-gold font-bold tracking-[0.2em] uppercase text-xs opacity-60 group-hover:opacity-100 transition-opacity">
-                <FaEnvelopeOpenText className="text-lg animate-bounce" />
+              <div className="relative py-4 px-6 rounded-full border border-luxury-gold/20 flex items-center justify-center gap-3 text-luxury-gold font-bold tracking-[0.2em] uppercase text-[10px] md:text-xs group-hover:bg-luxury-gold group-hover:text-luxury-black transition-all duration-500 shadow-[0_0_20px_rgba(212,175,55,0.1)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.3)]">
+                <FaEnvelopeOpenText className="text-lg group-hover:scale-110 transition-transform duration-300" />
                 <span>Click to Open Invitation</span>
               </div>
-            </motion.div>
+            </motion.button>
 
             {/* Floating particles or stars could be added here */}
           </motion.div>
