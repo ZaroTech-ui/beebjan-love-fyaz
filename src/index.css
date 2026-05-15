@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-gold: #D4AF37;
+  --color-luxury-gold-light: #F9E4B7;
+  --color-luxury-gold-dark: #996515;
+  --color-luxury-emerald: #043927;
+  --color-luxury-emerald-light: #065F46;
+  --color-luxury-black: #050505;
+  --color-luxury-ivory: #FFFFF0;
+
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+  --font-arabic: "Amiri", serif;
+
+  --animate-glow-slow: glow 4s ease-in-out infinite;
+  --animate-shimmer: shimmer 2s linear infinite;
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-spin-slow: spin 8s linear infinite;
+  --animate-spin-slower: spin 12s linear infinite;
+
+  @keyframes glow {
+    0%, 100% { opacity: 0.8; filter: brightness(100%); }
+    50% { opacity: 1; filter: brightness(150%); }
+  }
+  @keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+}
+
+:root {
+  --gold: #D4AF37;
+  --emerald: #043927;
+  --black: #050505;
+  --ivory: #FFFFF0;
+}
+
+body {
+  @apply bg-luxury-black text-luxury-ivory font-body overflow-x-hidden;
+  background-attachment: fixed;
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-lg border border-white/10;
+}
+
+.glass-gold {
+  @apply bg-luxury-gold/5 backdrop-blur-lg border border-luxury-gold/20;
+}
+
+.text-gradient-gold {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-luxury-gold via-luxury-gold-light to-luxury-gold-dark;
+}
+
+.btn-luxury {
+  @apply relative px-8 py-3 overflow-hidden rounded-full transition-all duration-500;
+  background: linear-gradient(45deg, var(--gold), #f9e4b7);
+  color: var(--black);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.btn-luxury:hover {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+  transform: scale(1.05);
+}
+
+.btn-luxury::after {
+  content: '';
+  @apply absolute top-0 -left-full w-full h-full;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+  transition: all 0.5s;
+}
+
+.btn-luxury:hover::after {
+  @apply left-full;
+}
+
+.islamic-border {
+  border-image-source: url('https://www.transparenttextures.com/patterns/arabesque.png');
+  border-image-slice: 30;
+  border-width: 2px;
+}
+
+.glow-lantern {
+  box-shadow: 0 0 50px 10px rgba(212, 175, 55, 0.2);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-luxury-black;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-luxury-gold/50 rounded-full hover:bg-luxury-gold;
+}
+
+.parallax-bg {
+  transform: translateZ(-1px) scale(2);
+  z-index: -1;
+}
+
+.arabic-text {
+  @apply font-arabic text-2xl;
+}
