@@ -51,12 +51,12 @@ const Hero: React.FC = () => {
       </motion.div>
 
       {/* Hero Content */}
-      <div className="relative z-20 text-center px-4 max-w-5xl mx-auto">
+      <div className="relative z-20 text-center px-6 max-w-5xl mx-auto w-full">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 1, duration: 1 }}
-          className="arabic-text text-luxury-gold-light mb-8 italic"
+          className="arabic-text text-luxury-gold-light mb-6 italic text-lg md:text-2xl leading-relaxed max-w-xs md:max-w-none mx-auto"
         >
           In the Name of Allah, The Most Beneficent, The Most Merciful
         </motion.p>
@@ -67,20 +67,20 @@ const Hero: React.FC = () => {
           transition={{ delay: 1.5, duration: 1.2, ease: "easeOut" }}
           className="mb-6"
         >
-          <span className="text-luxury-gold uppercase tracking-[0.4em] text-sm md:text-base font-medium">
+          <span className="text-luxury-gold uppercase tracking-[0.3em] text-xs md:text-base font-medium">
             Wedding Invitation
           </span>
-          <div className="h-[1px] w-24 bg-luxury-gold mx-auto mt-2" />
+          <div className="h-[1px] w-16 md:w-24 bg-luxury-gold mx-auto mt-2" />
         </motion.div>
 
         <motion.h1
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-4xl md:text-8xl font-heading mb-8 leading-tight px-2"
+          className="text-3xl md:text-8xl font-heading mb-6 md:mb-8 leading-tight px-2"
         >
           <span className="block text-luxury-ivory">Shaik Beebijan</span>
-          <span className="text-luxury-gold inline-block my-2 text-3xl md:text-6xl">❤️</span>
+          <span className="text-luxury-gold inline-block my-1 md:my-2 text-2xl md:text-6xl">❤️</span>
           <span className="block text-luxury-ivory">Shaik Fayaz</span>
         </motion.h1>
 
@@ -88,23 +88,23 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5, duration: 1 }}
-          className="grid grid-cols-2 md:flex md:flex-row justify-center gap-4 md:gap-6 mb-12 max-w-sm mx-auto md:max-w-none"
+          className="grid grid-cols-2 md:flex md:flex-row justify-center gap-3 md:gap-6 mb-10 md:mb-12 max-w-[320px] mx-auto md:max-w-none"
         >
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
-            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.days}</span>
-            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Days</span>
+          <div className="text-center px-3 py-2 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[70px] md:min-w-[100px]">
+            <span className="block text-xl md:text-3xl font-heading text-luxury-gold">{timeLeft.days}</span>
+            <span className="text-[9px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Days</span>
           </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
-            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.hours}</span>
-            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Hours</span>
+          <div className="text-center px-3 py-2 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[70px] md:min-w-[100px]">
+            <span className="block text-xl md:text-3xl font-heading text-luxury-gold">{timeLeft.hours}</span>
+            <span className="text-[9px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Hours</span>
           </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
-            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.minutes}</span>
-            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Min</span>
+          <div className="text-center px-3 py-2 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[70px] md:min-w-[100px]">
+            <span className="block text-xl md:text-3xl font-heading text-luxury-gold">{timeLeft.minutes}</span>
+            <span className="text-[9px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Min</span>
           </div>
-          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
-            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.seconds}</span>
-            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Sec</span>
+          <div className="text-center px-3 py-2 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[70px] md:min-w-[100px]">
+            <span className="block text-xl md:text-3xl font-heading text-luxury-gold">{timeLeft.seconds}</span>
+            <span className="text-[9px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Sec</span>
           </div>
         </motion.div>
 

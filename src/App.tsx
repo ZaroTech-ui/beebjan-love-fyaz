@@ -29,7 +29,7 @@ function App() {
   }, []);
 
   return (
-    <main className="relative bg-luxury-black text-luxury-ivory selection:bg-luxury-gold selection:text-luxury-black">
+    <main className="relative bg-luxury-black text-luxury-ivory selection:bg-luxury-gold selection:text-luxury-black overflow-x-hidden">
       <LoadingScreen />
       <Navbar />
       <MusicPlayer />

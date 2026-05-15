@@ -109,5 +109,5 @@ body {
 }
 
 .arabic-text {
-  @apply font-arabic text-2xl;
+  @apply font-arabic text-xl md:text-2xl;
 }
