@@ -55,16 +55,16 @@ const Navbar: React.FC = () => {
       </motion.nav>
 
       {/* Mobile Bottom Navigation */}
-      <nav className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 md:hidden w-[90%] max-w-[400px]">
-        <div className="glass-gold px-6 py-4 rounded-3xl shadow-2xl flex justify-between items-center border border-luxury-gold/30">
+      <nav className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50 md:hidden w-[92%] max-w-[420px]">
+        <div className="glass-gold px-4 py-4 rounded-[2rem] shadow-2xl flex justify-around items-center border border-luxury-gold/40 backdrop-blur-2xl">
           {navItems.map((item) => (
             <a
               key={item.name}
               href={item.href}
-              className="text-luxury-gold/70 hover:text-luxury-gold transition-colors flex flex-col items-center gap-1"
+              className="text-luxury-gold/70 hover:text-luxury-gold transition-all flex flex-col items-center gap-1.5 active:scale-95"
             >
-              <span className="text-xl">{item.icon}</span>
-              <span className="text-[10px] uppercase tracking-tighter">{item.name}</span>
+              <span className="text-2xl">{item.icon}</span>
+              <span className="text-[10px] md:text-[11px] uppercase tracking-tighter font-medium">{item.name}</span>
             </a>
           ))}
         </div>

@@ -51,6 +51,8 @@ function App() {
           <Venue />
           <RSVP />
           <Footer />
+          {/* Mobile Navigation Spacer */}
+          <div className="h-28 md:hidden" />
         </div>
       </div>
     </main>

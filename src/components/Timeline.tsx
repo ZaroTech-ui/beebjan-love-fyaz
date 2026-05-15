@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Section from './Section';
 import { FaMoon, FaMosque, FaUtensils } from 'react-icons/fa';
+import { cn } from '../lib/utils';
 
 const events = [
   {
@@ -35,22 +36,23 @@ const TimelineItem: React.FC<{ event: typeof events[0]; index: number }> = ({ ev
     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
     whileInView={{ opacity: 1, x: 0 }}
     viewport={{ once: true }}
-    className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-24 last:mb-0"
+    className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-16 md:mb-24 last:mb-0"
   >
-    <div className={index % 2 === 0 ? "md:order-1 text-right" : "md:order-2"}>
-      <div className={index % 2 === 0 ? "flex flex-col items-end" : "flex flex-col items-start"}>
-        <div className="w-16 h-16 rounded-full glass-gold flex items-center justify-center mb-6 shadow-glow-slow">
-          {event.icon}
-        </div>
-        <span className="text-luxury-gold text-sm tracking-[0.2em] uppercase mb-2">
-          {event.date} • {event.day}
-        </span>
-        <h3 className="text-3xl font-heading text-luxury-ivory mb-2">{event.title}</h3>
-        <p className="text-luxury-gold-light font-medium mb-4">{event.time}</p>
-        <p className="text-luxury-ivory/60 max-w-sm leading-relaxed">
-          {event.description}
-        </p>
+    <div className={cn(
+      "flex flex-col items-center",
+      index % 2 === 0 ? "md:items-end md:text-right md:order-1" : "md:items-start md:text-left md:order-2"
+    )}>
+      <div className="w-14 h-14 md:w-16 md:h-16 rounded-full glass-gold flex items-center justify-center mb-4 md:mb-6 shadow-glow-slow">
+        {event.icon}
       </div>
+      <span className="text-luxury-gold text-xs md:text-sm tracking-[0.2em] uppercase mb-2">
+        {event.date} • {event.day}
+      </span>
+      <h3 className="text-2xl md:text-3xl font-heading text-luxury-ivory mb-2">{event.title}</h3>
+      <p className="text-luxury-gold-light font-medium mb-3 md:mb-4">{event.time}</p>
+      <p className="text-luxury-ivory/60 max-w-sm leading-relaxed text-center md:text-inherit px-4 md:px-0">
+        {event.description}
+      </p>
     </div>
     
     <div className="hidden md:flex items-center justify-center relative">

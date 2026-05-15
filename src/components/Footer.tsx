@@ -4,7 +4,7 @@ import { FaMoon, FaStar, FaWhatsapp, FaEnvelope, FaCode } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="relative py-24 px-8 overflow-hidden bg-luxury-black border-t border-luxury-gold/20">
+    <footer className="relative py-16 md:py-24 px-6 md:px-8 overflow-hidden bg-luxury-black border-t border-luxury-gold/20">
       {/* Decorative Background */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]" />
@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-heading text-gradient-gold mb-8"
+          className="text-3xl md:text-5xl font-heading text-gradient-gold mb-8 px-4"
         >
           Thank you for being part of our blessed day
         </motion.h2>
@@ -56,8 +56,8 @@ const Footer: React.FC = () => {
             <div className="w-10 h-10 rounded-full border border-luxury-gold/30 flex items-center justify-center mb-4 text-luxury-gold">
               <FaCode />
             </div>
-            <h3 className="text-xl uppercase tracking-[0.3em] text-luxury-gold/60 mb-2">Website Developed by</h3>
-            <h4 className="text-4xl font-heading text-gradient-gold mb-6">Zaro Tech</h4>
+            <h3 className="text-lg md:text-xl uppercase tracking-[0.3em] text-luxury-gold/60 mb-2">Website Developed by</h3>
+            <h4 className="text-3xl md:text-4xl font-heading text-gradient-gold mb-6">Zaro Tech</h4>
             <a 
               href="mailto:contactzarotech@gmail.com" 
               className="flex items-center gap-2 text-luxury-gold/80 hover:text-luxury-gold transition-colors"
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl border border-luxury-gold/20 bg-luxury-emerald/5 backdrop-blur-sm flex flex-col items-center group hover:border-luxury-gold/50 transition-all duration-500"
+              className="p-6 md:p-8 rounded-2xl border border-luxury-gold/20 bg-luxury-emerald/5 backdrop-blur-sm flex flex-col items-center group hover:border-luxury-gold/50 transition-all duration-500"
             >
               <span className="text-xs uppercase tracking-[0.3em] text-luxury-gold/40 mb-4">Developer</span>
               <h5 className="text-2xl font-heading text-luxury-ivory mb-8 group-hover:text-luxury-gold transition-colors">SIDDHARTHA</h5>
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
               initial={{ opacity: 0, x: 20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="p-8 rounded-2xl border border-luxury-gold/20 bg-luxury-emerald/5 backdrop-blur-sm flex flex-col items-center group hover:border-luxury-gold/50 transition-all duration-500"
+              className="p-6 md:p-8 rounded-2xl border border-luxury-gold/20 bg-luxury-emerald/5 backdrop-blur-sm flex flex-col items-center group hover:border-luxury-gold/50 transition-all duration-500"
             >
               <span className="text-xs uppercase tracking-[0.3em] text-luxury-gold/40 mb-4">Developer</span>
               <h5 className="text-2xl font-heading text-luxury-ivory mb-8 group-hover:text-luxury-gold transition-colors">ANIL</h5>

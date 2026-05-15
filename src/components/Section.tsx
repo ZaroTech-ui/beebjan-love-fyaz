@@ -12,10 +12,10 @@ interface SectionProps {
 
 const Section: React.FC<SectionProps> = ({ children, id, className, title, subtitle }) => {
   return (
-    <section id={id} className={cn("relative py-24 px-4 md:px-8", className)}>
+    <section id={id} className={cn("relative py-16 md:py-24 px-4 md:px-8", className)}>
       <div className="max-w-7xl mx-auto">
         {(title || subtitle) && (
-          <div className="text-center mb-16">
+          <div className="text-center mb-10 md:mb-16">
             {subtitle && (
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -31,7 +31,7 @@ const Section: React.FC<SectionProps> = ({ children, id, className, title, subti
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                className="text-4xl md:text-6xl font-heading text-gradient-gold mb-6"
+                className="text-3xl md:text-6xl font-heading text-gradient-gold mb-6"
               >
                 {title}
               </motion.h2>

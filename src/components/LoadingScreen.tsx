@@ -27,8 +27,12 @@ const LoadingScreen: React.FC = () => {
             transition={{ duration: 1 }}
             className="max-w-md w-full relative"
           >
-            {/* The "Envelope" Card */}
-            <div className="relative p-12 text-center rounded-[2rem] glass-gold border border-luxury-gold/30 backdrop-blur-xl shadow-[0_0_50px_rgba(212,175,55,0.1)]">
+            <motion.div
+              whileHover={{ scale: 1.02 }}
+              whileTap={{ scale: 0.98 }}
+              onClick={() => setIsOpen(true)}
+              className="relative p-8 md:p-12 text-center rounded-[2rem] glass-gold border border-luxury-gold/30 backdrop-blur-xl shadow-[0_0_50px_rgba(212,175,55,0.1)] cursor-pointer group"
+            >
               {/* Corner Ornaments */}
               <div className="absolute top-4 left-4 w-12 h-12 border-t-2 border-l-2 border-luxury-gold/20 rounded-tl-xl" />
               <div className="absolute bottom-4 right-4 w-12 h-12 border-b-2 border-r-2 border-luxury-gold/20 rounded-br-xl" />
@@ -40,31 +44,21 @@ const LoadingScreen: React.FC = () => {
                 className="mb-8 relative inline-block"
               >
                 <div className="absolute inset-0 bg-luxury-gold/20 blur-2xl rounded-full" />
-                <FaMoon className="text-7xl text-luxury-gold relative z-10 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] rotate-[-15deg]" />
+                <FaMoon className="text-6xl md:text-7xl text-luxury-gold relative z-10 drop-shadow-[0_0_15px_rgba(212,175,55,0.4)] rotate-[-15deg]" />
               </motion.div>
 
               <h2 className="text-xl tracking-[0.4em] uppercase text-luxury-gold/60 mb-2">Blessed Marriage of</h2>
-              <h1 className="text-4xl font-heading text-gradient-gold mb-8 leading-relaxed">
+              <h1 className="text-3xl md:text-4xl font-heading text-gradient-gold mb-8 leading-relaxed">
                 Beebijan & Shaik Fayaz
               </h1>
               
               <div className="w-24 h-[1px] bg-luxury-gold/20 mx-auto mb-10" />
 
-              <motion.button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => setIsOpen(true)}
-                className="group relative px-10 py-5 rounded-full overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-luxury-gold opacity-10 group-hover:opacity-20 transition-opacity" />
-                <div className="absolute inset-0 border border-luxury-gold/50 rounded-full" />
-                
-                <div className="relative flex items-center gap-3 text-luxury-gold font-bold tracking-[0.2em] uppercase text-sm">
-                  <FaEnvelopeOpenText className="text-lg animate-bounce" />
-                  <span>Open Invitation</span>
-                </div>
-              </motion.button>
-            </div>
+              <div className="relative flex items-center justify-center gap-3 text-luxury-gold font-bold tracking-[0.2em] uppercase text-xs opacity-60 group-hover:opacity-100 transition-opacity">
+                <FaEnvelopeOpenText className="text-lg animate-bounce" />
+                <span>Click to Open Invitation</span>
+              </div>
+            </motion.div>
 
             {/* Floating particles or stars could be added here */}
           </motion.div>

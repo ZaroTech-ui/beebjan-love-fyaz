@@ -23,7 +23,7 @@ const RSVP: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="glass-gold p-8 md:p-12 rounded-3xl border border-luxury-gold/30"
+          className="glass-gold p-6 md:p-12 rounded-3xl border border-luxury-gold/30"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid md:grid-cols-2 gap-6">

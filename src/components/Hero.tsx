@@ -77,10 +77,10 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 2, duration: 1 }}
-          className="text-5xl md:text-8xl font-heading mb-8 leading-tight"
+          className="text-4xl md:text-8xl font-heading mb-8 leading-tight px-2"
         >
           <span className="block text-luxury-ivory">Shaik Beebijan</span>
-          <span className="text-luxury-gold inline-block my-2">❤️</span>
+          <span className="text-luxury-gold inline-block my-2 text-3xl md:text-6xl">❤️</span>
           <span className="block text-luxury-ivory">Shaik Fayaz</span>
         </motion.h1>
 
@@ -88,23 +88,23 @@ const Hero: React.FC = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 2.5, duration: 1 }}
-          className="flex flex-wrap justify-center gap-6 mb-12"
+          className="grid grid-cols-2 md:flex md:flex-row justify-center gap-4 md:gap-6 mb-12 max-w-sm mx-auto md:max-w-none"
         >
-          <div className="text-center px-6 py-4 glass-gold rounded-2xl min-w-[100px]">
-            <span className="block text-3xl font-heading text-luxury-gold">{timeLeft.days}</span>
-            <span className="text-xs uppercase tracking-widest text-luxury-gold-light/70">Days</span>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
+            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.days}</span>
+            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Days</span>
           </div>
-          <div className="text-center px-6 py-4 glass-gold rounded-2xl min-w-[100px]">
-            <span className="block text-3xl font-heading text-luxury-gold">{timeLeft.hours}</span>
-            <span className="text-xs uppercase tracking-widest text-luxury-gold-light/70">Hours</span>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
+            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.hours}</span>
+            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Hours</span>
           </div>
-          <div className="text-center px-6 py-4 glass-gold rounded-2xl min-w-[100px]">
-            <span className="block text-3xl font-heading text-luxury-gold">{timeLeft.minutes}</span>
-            <span className="text-xs uppercase tracking-widest text-luxury-gold-light/70">Min</span>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
+            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.minutes}</span>
+            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Min</span>
           </div>
-          <div className="text-center px-6 py-4 glass-gold rounded-2xl min-w-[100px]">
-            <span className="block text-3xl font-heading text-luxury-gold">{timeLeft.seconds}</span>
-            <span className="text-xs uppercase tracking-widest text-luxury-gold-light/70">Sec</span>
+          <div className="text-center px-4 py-3 md:px-6 md:py-4 glass-gold rounded-2xl min-w-[80px] md:min-w-[100px]">
+            <span className="block text-2xl md:text-3xl font-heading text-luxury-gold">{timeLeft.seconds}</span>
+            <span className="text-[10px] md:text-xs uppercase tracking-widest text-luxury-gold-light/70">Sec</span>
           </div>
         </motion.div>
 
@@ -113,15 +113,9 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 3, duration: 1 }}
         >
-          <p className="text-xl md:text-2xl font-heading text-luxury-gold-light mb-8">
+          <p className="text-xl md:text-2xl font-heading text-luxury-gold-light mb-4 md:mb-8">
             11 June 2026
           </p>
-          <button className="btn-luxury group">
-            <span className="relative z-10 font-medium tracking-widest uppercase text-sm">
-              Open Invitation
-            </span>
-            <div className="absolute inset-0 bg-white/20 opacity-0 group-hover:opacity-100 transition-opacity" />
-          </button>
         </motion.div>
       </div>
 

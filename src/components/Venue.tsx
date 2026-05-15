@@ -14,7 +14,7 @@ const Venue: React.FC = () => {
           className="relative overflow-hidden rounded-3xl glass border border-luxury-gold/20"
         >
           <div className="grid md:grid-cols-2">
-            <div className="p-8 md:p-12 flex flex-col justify-center">
+            <div className="p-6 md:p-12 flex flex-col justify-center">
               <div className="flex items-center gap-3 text-luxury-gold mb-6">
                 <FaMapMarkerAlt className="animate-bounce" />
                 <span className="uppercase tracking-widest text-sm font-semibold">Location Details</span>
@@ -41,7 +41,7 @@ const Venue: React.FC = () => {
               </a>
             </div>
             
-            <div className="h-[400px] md:h-auto relative group overflow-hidden">
+            <div className="h-[300px] md:h-auto relative group overflow-hidden">
               {/* Modern Map Container */}
               <div className="absolute inset-0 bg-luxury-emerald/10" />
               <iframe

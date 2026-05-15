@@ -12,15 +12,15 @@ const FamilyCard: React.FC<{ title: string; parents: string; role: string }> = (
   >
     <div className="absolute inset-0 bg-luxury-gold/10 blur-xl group-hover:bg-luxury-gold/20 transition-all duration-700 rounded-3xl" />
     <div className="relative p-1 rounded-3xl bg-gradient-to-br from-luxury-gold/50 via-luxury-gold/10 to-luxury-gold/50">
-      <div className="bg-luxury-black/90 backdrop-blur-xl rounded-[calc(1.5rem-1px)] p-8 md:p-12 text-center border border-white/5 h-full flex flex-col justify-center">
-        <span className="text-luxury-gold uppercase tracking-[0.3em] text-xs mb-4 block">
+      <div className="bg-luxury-black/90 backdrop-blur-xl rounded-[calc(1.5rem-1px)] p-6 md:p-12 text-center border border-white/5 h-full flex flex-col justify-center">
+        <span className="text-luxury-gold uppercase tracking-[0.3em] text-[10px] md:text-xs mb-3 md:mb-4 block">
           {role}
         </span>
-        <h3 className="text-3xl md:text-4xl font-heading text-luxury-ivory mb-6">
+        <h3 className="text-2xl md:text-4xl font-heading text-luxury-ivory mb-4 md:mb-6">
           {title}
         </h3>
-        <div className="w-12 h-[1px] bg-luxury-gold/30 mx-auto mb-6" />
-        <p className="text-luxury-gold-light text-lg md:text-xl font-light leading-relaxed">
+        <div className="w-10 h-[1px] bg-luxury-gold/30 mx-auto mb-4 md:mb-6" />
+        <p className="text-luxury-gold-light text-base md:text-xl font-light leading-relaxed">
           {parents}
         </p>
       </div>
