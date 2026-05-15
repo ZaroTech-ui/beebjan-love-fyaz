@@ -34,7 +34,7 @@ const Family: React.FC = () => {
       <div className="grid md:grid-cols-2 gap-8 lg:gap-16">
         <FamilyCard 
           role="Bride Family"
-          title="Beebijan"
+          title="Shaik Beebijan"
           parents="Mr. Shaik Basha & Mrs. Mamoola"
         />
         <FamilyCard 

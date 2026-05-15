@@ -49,7 +49,7 @@ const LoadingScreen: React.FC = () => {
 
               <h2 className="text-xl tracking-[0.4em] uppercase text-luxury-gold/60 mb-2">Blessed Marriage of</h2>
               <h1 className="text-3xl md:text-4xl font-heading text-gradient-gold mb-8 leading-relaxed">
-                Beebijan & Shaik Fayaz
+                Shaik Beebijan & Shaik Fayaz
               </h1>
               
               <div className="w-24 h-[1px] bg-luxury-gold/20 mx-auto mb-10" />
